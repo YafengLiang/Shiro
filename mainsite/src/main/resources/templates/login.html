@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta content="Coderthemes" name="author"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>H+ 后台主题UI框架 - 登录</title>
+    <meta name="keywords" content="H+后台主题,后台bootstrap框架,会员中心主题,后台HTML,响应式后台">
+    <meta name="description" content="H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link th:href="@{/css/bootstrap.min.css}" href="../static/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link th:href="@{/css/font-awesome.css}" href="../static/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link th:href="@{/css/animate.css}" href="../static/css/animate.css" rel="stylesheet">
+    <link th:href="@{/css/style-a.css}" href="../static/css/style-a.css?v=4.1.0" rel="stylesheet">
+    <link th:href="@{/css/login.css}" href="../static/css/login.css" rel="stylesheet" />
+    <link th:href="@{/css/login_1.css}" href="../static/css/login_1.css" rel="stylesheet" />
+    <link th:href="@{/css/select2.min.css}" href="../static/css/select2.min.css" rel="stylesheet">
+    <link  th:href="@{/css/select_gj.css}" href="../static/css/select_gj.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+    <script>if(window.top !== window.self){ window.top.location = window.location;}</script>
+    <script th:src="@{/js/jquery.min.js}" src="../static/js/jquery.min.js?v=2.1.4"></script>
+</head>
+
+<body class="gray-bg">
+
+    <div class="middle-box text-center loginscreen  animated fadeInDown">
+        <div>
+            <div>
+                <h1 class="logo-name">H+</h1>
+            </div>
+            <h3>Welcome to use H+</h3>
+            <div style="color: red;height: 19px;">
+                <h4  th:text="${message}"></h4>
+            </div>
+
+            <form class="m-t" role="form" action="/login" method="post">
+                <!--<div class="form-group">-->
+                    <!--<select id="selectLanguage" name="language"  class="form-control fastbannerform__country" style="width: 100%">-->
+                        <!--<option value="en_US" title="US">English</option>-->
+                        <!--<option value="zh_CN" title="CN">中文</option>-->
+                        <!--&lt;!&ndash;<option value="tw" title="TW">Taiwan</option>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<option value="ja" title="JP">Japan</option>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<option value="ko" title="KR">South Korea</option>&ndash;&gt;-->
+                    <!--</select>-->
+                <!--</div>-->
+                <div class="form-group">
+                    <input type="text"  id="username" name="username" class="form-control"  placeholder="username" required="">
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" name="password" class="form-control"  placeholder="password" required="">
+                </div>
+                <button type="submit" class="btn btn-primary block full-width m-b" >Login</button>
+                <!--<p class="text-muted text-center"> <a href="/login"><small>忘记密码了？</small></a> | <a href="/login">注册一个新账号</a>-->
+                <!--</p>-->
+
+            </form>
+        </div>
+    </div>
+    <script th:inline="JavaScript">
+        // jQuery(document).ready(function () {
+        //     var langType = [[${langType}]];
+        //     if(langType ==null ){
+        //         langType='en_US'
+        //     }
+        //     $("#selectLanguage").val(langType)
+        //     console.info(langType+"-----------------")
+        // });
+        // document.onkeydown = function (event) {//监听回车键提交表单
+        //     var e = event ? event : (window.event ? window.event : null);
+        //     if (e.keyCode == 13) {
+        //         $("#submit").click();
+        //     }
+        // };
+        //
+        // $(function () {
+        //     $('#selectLanguage').change(function (e) {
+        //         var selectLanguage = $("#selectLanguage").val();
+        //         console.log('hahah');
+        //         window.location.href = "/language/global?langType=" + selectLanguage + "&language=login";
+        //     })
+        // });
+
+    </script>
+    <!-- 全局js -->
+
+    <script th:src="@{/js/bootstrap.min.js}" src="../static/js/bootstrap.min.js?v=3.3.6"></script>
+    <script th:src="@{/js/select2_1.js}" src="../static/js/select2_1.js" ></script>
+    <script th:src="@{/js/select_gj.min.js}" src="../static/js/select_gj.min.js" ></script>
+
+
+</body>
+
+</html>
